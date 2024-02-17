@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/photo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Movie App</title>
+</head>
+
+<body>
+    <div id="loading" class="loading">
+        <span id="loader" class="loader"></span>
+
+    </div>
+
+
+    <!--star side bar-->
+    <div id="sideBar" class="sideBar min-vh-100 position-fixed d-flex top-0">
+        <div id="side-box" class="side-box  d-flex flex-column justify-content-between min-vh-100 p-4 bg-black">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="getNowPlaying()" class="py-3 position-relative cursor-pointer lists">Now Playing</li>
+                    <li onclick="popular()" class="py-3 position-relative cursor-pointer lists">Popular</li>
+                    <li onclick="topRated()" class="py-3 position-relative cursor-pointer lists">Top Rated</li>
+                    <li onclick="upComing()" class="py-3 position-relative cursor-pointer lists">Upcoming</li>
+                    <li class="py-3 position-relative cursor-pointer contactlist">Contact Us</li>
+                </ul>
+            </div>
+            <div class="sideBar-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f px-2"></i>
+                    <i class="fa-brands fa-twitter px-2"></i>
+                    <i class="fa-solid fa-globe px-2"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2024 All Rights <br>Reserved. <br>Created by <a class="text-danger"
+                            href="https://www.linkedin.com/in/islam-fawaz-395b1122b/">Islam Fawaz</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center bg-white text-black">
+            <img class="logo w-50 mx-auto" src="images/photo1.png" alt="" srcset="">
+            <i id="icon" class="fa-sharp fa-solid fa-x fs-3 cursor-pointer"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--end side bar-->
+
+
+    <input id="search" placeholder="Search" class="form-control mx-auto w-50 mt-5 rounded-4 bg-transparent text-white" type="text">
+
+    <div class="container">
+        <div id="rowData" class="row g-5 m-1">
+
+
+        </div>
+    </div>
+
+
+
+    
+<div class="">
+    <div class="container">
+        <div class="row g-4 py-4">
+            <h3>Contact Us</h3>
+            <div class="col-md-6">
+                <input id="nameInput" onkeyup="inputsValidation()" type="text" class="form-control contact text-white" placeholder="Enter Your Name">
+                <div id="nameAlert" class="bg-transparent text-danger  d-none">
+                    Invalid Name , only Character allowed
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input id="emailInput" onkeyup="inputsValidation()" type="email" class="form-control contact text-white " placeholder="Enter Your Email">
+                <div id="emailAlert" class="bg-transparent text-danger d-none">
+                    Invalid Emzail , try example@domain.com
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input id="phoneInput" onkeyup="inputsValidation()" type="text" class="form-control contact text-white " placeholder="Enter Your Phone">
+                <div id="phoneAlert" class="bg-transparent text-danger d-none">
+                    Invalid valid Phone Number
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input id="ageInput" onkeyup="inputsValidation()" type="number" class="form-control contact text-white " placeholder="Enter Your Age">
+                <div id="ageAlert" class="bg-transparent text-danger d-none">
+                    Your age must be over 16+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input  id="passwordInput" onkeyup="inputsValidation()" type="password" class="form-control contact text-white " placeholder="Enter Your Password">
+                <div id="passwordAlert" class="bg-transparent text-danger d-none">
+                    Password letter and number at least 8 character
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input  id="repasswordInput" onkeyup="inputsValidation()" type="password" class="form-control contact text-white " placeholder="Repassword">
+                <div id="repasswordAlert" class="bg-transparent text-danger d-none">
+                    password not match 
+                </div>
+            </div>
+        </div>
+        <button disabled id="submitBtn"  class="btn btn-outline-dark px-2 my-3 ">Submit</button>
+    </div>
+</div> 
+
+    <button id="btnUp" class="btn bg-color p-3 rounded-circle bg-black text-white">
+        <i class="fas fa-arrow-up-long"></i>
+    </button>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
